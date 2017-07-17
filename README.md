@@ -27,10 +27,7 @@
 功能实现
 ---------------------------------
 
-#### 步骤1:获取用户的截屏事件</br>
-
-目前有两种方式：</br>
-1.注册通知(常用的方式)  
+#### 步骤1:获取用户的截屏事件,注册通知</br> 
 * iOS7提供一个崭新的推送方法:UIApplicationUserDidTakeScreenshotNotification 将会在截图完成之后显示。现在在截图截取之前无法得到通知。</br>
 
 ~~~
@@ -41,14 +38,6 @@
 }
 ~~~
 
-2.第二种是通过开源库ShotBlocker，但是需要获取用户的相册的权限
-
-~~~
-[[ShotBlocker sharedManager] detectScreenshotWithImageBlock:^(UIImage *screenshot) {
-
-    NSLog(@"Screenshot! %@", screenshot);
-}
-~~~
 
 #### 步骤2、获取截图并且漂浮显示,同时增加分享功能</br>
 
