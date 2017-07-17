@@ -5,14 +5,13 @@ iOS开发中,手机截图并且同时实现分享功能
 ---------------------------------
 
 目前有两种方式：</br>
-1.注册通知  
+1.注册通知(常用的方式)  
 * iOS7提供一个崭新的推送方法：</br>
 UIApplicationUserDidTakeScreenshotNotification。只要像往常一样订阅即可知道什么时候截图了。</br>
 注意：UIApplicationUserDidTakeScreenshotNotification 将会在截图完成之后显示。现在在截图截取之前无法得到通知。</br>
 
 ~~~
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:)
-name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 
 - (void)userDidTakeScreenshot:(NSNotification *)notification{
     NSLog(@"检测到截屏");
@@ -23,8 +22,7 @@ name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 
 ~~~
 [[ShotBlocker sharedManager] detectScreenshotWithImageBlock:^(UIImage *screenshot) {</br>
-NSLog(@"Screenshot! %@", screenshot);
-
+    NSLog(@"Screenshot! %@", screenshot);
 }
 ~~~
 
