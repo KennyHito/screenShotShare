@@ -1,16 +1,15 @@
-# screenShotShare
-
-iOS开发中,手机截图分享功能</br>
+iOS开发中,手机截图并且同时实现分享功能
 ---------------------------------
 
-步骤1:获取用户的截屏事件</br>
+步骤1:获取用户的截屏事件
 ---------------------------------
 
 目前有两种方式：</br>
 1.注册通知  
-iOS7提供一个崭新的推送方法：UIApplicationUserDidTakeScreenshotNotification。只要像往常一样订阅即可知道什么时候截图了。</br>
+iOS7提供一个崭新的推送方法：
+* UIApplicationUserDidTakeScreenshotNotification。只要像往常一样订阅即可知道什么时候截图了。</br>
 注意：UIApplicationUserDidTakeScreenshotNotification 将会在截图完成之后显示。现在在截图截取之前无法得到通知。</br>
-希望苹果会在iOS8当中增加 UIApplicationUserWillTakeScreenshotNotification。（只有did, 没有will显然不是苹果的风格...）</br>
+* 望苹果会在iOS8当中增加 UIApplicationUserWillTakeScreenshotNotification。（只有did, 没有will显然不是苹果的风格...）</br>
 
 ~~~
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:)
