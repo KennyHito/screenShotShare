@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ShotBlocker.h"
 #import "DPScreenshotsPopView.h"
 
 @interface ViewController ()
@@ -26,25 +25,6 @@
     [self.view addSubview:iv];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
-}
-
-#pragma mark-shotBlock
--(void)shotBlock{
-    [[ShotBlocker sharedManager] detectScreenshotWithImageBlock:^(UIImage *screenshot) {
-        NSLog(@"Screenshot! %@", screenshot);
-        UIWindow *keyWindow=[[UIApplication sharedApplication]keyWindow];
-        DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screenshot selectSheetBlock:^(SelectSheetType type) {
-            if (type==QQSelectSheetType) {
-                NSLog(@"点击的是QQ分享");
-            }else if (type==WeiXinSelectSheetType){
-                NSLog(@"点击的是微信好友分享");
-            }else if (type==WeiXinCircleSelectSheetType){
-                NSLog(@"点击的是微信朋友圈分享");
-            }
-        }];
-        [popView show];
-        [keyWindow addSubview:popView];
-    }];
 }
 
 //截屏响应

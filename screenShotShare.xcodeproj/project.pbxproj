@@ -15,9 +15,7 @@
 		18457E391F1C5C41000E8D3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18457E371F1C5C41000E8D3A /* LaunchScreen.storyboard */; };
 		18457E441F1C5C41000E8D3A /* screenShotShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457E431F1C5C41000E8D3A /* screenShotShareTests.m */; };
 		18457E4F1F1C5C41000E8D3A /* screenShotShareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457E4E1F1C5C41000E8D3A /* screenShotShareUITests.m */; };
-		18457E611F1C5D90000E8D3A /* WechatIMG15.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18457E601F1C5D90000E8D3A /* WechatIMG15.jpeg */; };
 		18457E6B1F1C5ED0000E8D3A /* DPScreenshotsPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457E641F1C5ED0000E8D3A /* DPScreenshotsPopView.m */; };
-		18457E6C1F1C5ED0000E8D3A /* ShotBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457E671F1C5ED0000E8D3A /* ShotBlocker.m */; };
 		18457E6D1F1C5ED0000E8D3A /* YLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457E6A1F1C5ED0000E8D3A /* YLButton.m */; };
 /* End PBXBuildFile section */
 
@@ -55,11 +53,8 @@
 		18457E4A1F1C5C41000E8D3A /* screenShotShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = screenShotShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18457E4E1F1C5C41000E8D3A /* screenShotShareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = screenShotShareUITests.m; sourceTree = "<group>"; };
 		18457E501F1C5C41000E8D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18457E601F1C5D90000E8D3A /* WechatIMG15.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG15.jpeg; sourceTree = "<group>"; };
 		18457E631F1C5ED0000E8D3A /* DPScreenshotsPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPScreenshotsPopView.h; sourceTree = "<group>"; };
 		18457E641F1C5ED0000E8D3A /* DPScreenshotsPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPScreenshotsPopView.m; sourceTree = "<group>"; };
-		18457E661F1C5ED0000E8D3A /* ShotBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotBlocker.h; sourceTree = "<group>"; };
-		18457E671F1C5ED0000E8D3A /* ShotBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotBlocker.m; sourceTree = "<group>"; };
 		18457E691F1C5ED0000E8D3A /* YLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLButton.h; sourceTree = "<group>"; };
 		18457E6A1F1C5ED0000E8D3A /* YLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				18457E621F1C5ED0000E8D3A /* DPScreenshots */,
-				18457E601F1C5D90000E8D3A /* WechatIMG15.jpeg */,
 				18457E2C1F1C5C41000E8D3A /* AppDelegate.h */,
 				18457E2D1F1C5C41000E8D3A /* AppDelegate.m */,
 				18457E2F1F1C5C41000E8D3A /* ViewController.h */,
@@ -158,19 +152,9 @@
 			children = (
 				18457E631F1C5ED0000E8D3A /* DPScreenshotsPopView.h */,
 				18457E641F1C5ED0000E8D3A /* DPScreenshotsPopView.m */,
-				18457E651F1C5ED0000E8D3A /* ShotBlocker */,
 				18457E681F1C5ED0000E8D3A /* YLButton */,
 			);
 			path = DPScreenshots;
-			sourceTree = "<group>";
-		};
-		18457E651F1C5ED0000E8D3A /* ShotBlocker */ = {
-			isa = PBXGroup;
-			children = (
-				18457E661F1C5ED0000E8D3A /* ShotBlocker.h */,
-				18457E671F1C5ED0000E8D3A /* ShotBlocker.m */,
-			);
-			path = ShotBlocker;
 			sourceTree = "<group>";
 		};
 		18457E681F1C5ED0000E8D3A /* YLButton */ = {
@@ -294,7 +278,6 @@
 				18457E391F1C5C41000E8D3A /* LaunchScreen.storyboard in Resources */,
 				18457E361F1C5C41000E8D3A /* Assets.xcassets in Resources */,
 				18457E341F1C5C41000E8D3A /* Main.storyboard in Resources */,
-				18457E611F1C5D90000E8D3A /* WechatIMG15.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +305,6 @@
 				18457E6B1F1C5ED0000E8D3A /* DPScreenshotsPopView.m in Sources */,
 				18457E311F1C5C41000E8D3A /* ViewController.m in Sources */,
 				18457E6D1F1C5ED0000E8D3A /* YLButton.m in Sources */,
-				18457E6C1F1C5ED0000E8D3A /* ShotBlocker.m in Sources */,
 				18457E2E1F1C5C41000E8D3A /* AppDelegate.m in Sources */,
 				18457E2B1F1C5C41000E8D3A /* main.m in Sources */,
 			);
@@ -564,6 +546,7 @@
 				18457E551F1C5C41000E8D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18457E561F1C5C41000E8D3A /* Build configuration list for PBXNativeTarget "screenShotShareTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +555,7 @@
 				18457E581F1C5C41000E8D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18457E591F1C5C41000E8D3A /* Build configuration list for PBXNativeTarget "screenShotShareUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +564,7 @@
 				18457E5B1F1C5C41000E8D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
