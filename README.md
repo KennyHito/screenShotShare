@@ -12,25 +12,28 @@ iOS7提供一个崭新的推送方法：UIApplicationUserDidTakeScreenshotNotifi
 注意：UIApplicationUserDidTakeScreenshotNotification 将会在截图完成之后显示。现在在截图截取之前无法得到通知。</br>
 希望苹果会在iOS8当中增加 UIApplicationUserWillTakeScreenshotNotification。（只有did, 没有will显然不是苹果的风格...）</br>
 
-
-[[NSNotificationCenter defaultCenter] addObserver:self</br>
-selector:@selector(userDidTakeScreenshot:)</br>
-name:UIApplicationUserDidTakeScreenshotNotification object:nil];</br>
+~~~
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:)
+name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 
 - (void)userDidTakeScreenshot:(NSNotification *)notification{
-NSLog(@"检测到截屏");
+    NSLog(@"检测到截屏");
 }
+~~~
 
-2.第二种是通过开源库ShotBlocker，但是需要获取用户的相册的权限</br>
+2.第二种是通过开源库ShotBlocker，但是需要获取用户的相册的权限
+
+~~~
 [[ShotBlocker sharedManager] detectScreenshotWithImageBlock:^(UIImage *screenshot) {</br>
 NSLog(@"Screenshot! %@", screenshot);
 
-}</br>
-
+}
+~~~
 
 步骤2、获取截图并且漂浮显示,同时增加分享功能</br>
 ---------------------------------
 
+~~~
 UIWindow *keyWindow=[[UIApplication sharedApplication]keyWindow];
 DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screenshot selectSheetBlock:^(SelectSheetType type) {
     if (type==QQSelectSheetType) {
@@ -43,7 +46,7 @@ DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screensh
 }];
 [popView show];
 [keyWindow addSubview:popView];
-
+~~~
 
 最后,查看效果图
 ---------------------------------
